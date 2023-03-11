@@ -1,6 +1,6 @@
 # Runestone
 
-Runestone is a text adventure game written in ~GNU~ SWI-Prolog.  It's inspired by classic text adventures like _Zork_.  I'm writing it to sharpen my Prolog skills, learn a little about parsing, and basically bring meaning to my life tbh I don't have a whole lot going on.  Soon I'll release this and it'll set the world afire and bring in the big bucks 😎
+Runestone is a text adventure game written in (GNU) Prolog.  It's inspired by classic text adventures like _Zork_.  I'm writing it to sharpen my Prolog skills, learn a little about parsing, and basically bring meaning to my life tbh I don't have a whole lot going on.  Soon I'll release this and it'll set the world afire and bring in the big bucks 😎
 
 ## How to Play
 

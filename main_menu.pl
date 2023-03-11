@@ -9,27 +9,28 @@ display_main_menu :-
   nl,
   write('Enter your choice: '),
   % Read user input.
-  get_char(Input),
+  get_char(Char),
   % Consume the newline character.
   get0(_),
   % Convert input character to uppercase.
-  (char_type(Char, lower) ->
-    % Convert lowercase to uppercase ASCII code.
-    Input is Char - 32 
-  ; otherwise ->
-    % Keep uppercase characters as-is.
-    Input = Char 
+  char_code(Char, Code),
+  ((Code >= 97, Code =< 122) ->
+    Input is Code - 32 % Convert lowercase to uppercase ASCII code
+  ; true ->
+    Input = Code % Keep uppercase characters as-is
   ),
+  % Convert the uppercase code back to a character.
+  char_code(UpperChar, Input),
   % Handle user input.
-  (Input = 'N' ->
+  (UpperChar = 'N' ->
     % Start a new game.
     write('Hello!'), nl,
     fail
-  ; Input = 'Q' ->
+  ; UpperChar = 'Q' ->
     % Quit the program.
     write('Goodbye!'), nl,
     halt
-  ; otherwise ->
+  ; true ->
     % Invalid input.
     write('Invalid choice, please try again.'), nl,
     fail
