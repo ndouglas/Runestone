@@ -24,10 +24,11 @@ display_main_menu :-
   % Handle user input.
   (UpperChar = 'N' ->
     % Start a new game.
-    write('Hello!'), nl,
+    game_loop,
     fail
   ; UpperChar = 'Q' ->
-    % Quit the program.
+    % Quit the game.
+    nl,
     write('Goodbye!'), nl,
     halt
   ; true ->
